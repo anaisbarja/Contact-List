@@ -10,7 +10,7 @@ function App() {
     <>
     {/* use a ternary to conditionally render contactlist or selectedContact 
     don't worry about testing yet!*/}
-    {selectedContactId?<SelectedContact/>:
+    {selectedContactId?<SelectedContact selectedContactId={selectedContactId}/>:
     <ContactList setSelectedContactId={setSelectedContactId}/>}
 
     {/* // if we are showing all, render ContactList
