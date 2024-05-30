@@ -1,7 +1,7 @@
-export default function ContactRow({contact}){
-    const {name,email,phone} = contact
+export default function ContactRow({contact, setSelectedContactId}){
+    const {id,name,email,phone} = contact
     return(
-        <tr>
+        <tr onClick={()=>setSelectedContactId(id)}>
         <td>{name}</td>
         <td>{email}</td>
         <td>{phone}</td>
