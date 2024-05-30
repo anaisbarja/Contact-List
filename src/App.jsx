@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ContactList from './components/ContactList'
+import SelectedContact from './components/SelectedContact'
 
 function App() {
   const [selectedContactId, setSelectedContactId] = useState(null)
@@ -9,7 +10,7 @@ function App() {
     <>
     {/* use a ternary to conditionally render contactlist or selectedContact 
     don't worry about testing yet!*/}
-    {selectedContactId?<p>{selectedContactId}</p>:
+    {selectedContactId?<SelectedContact/>:
     <ContactList setSelectedContactId={setSelectedContactId}/>}
 
     {/* // if we are showing all, render ContactList
