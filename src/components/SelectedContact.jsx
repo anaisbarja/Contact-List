@@ -6,7 +6,7 @@ props={
 }
 */
 
-export default function SelectedContact({selectedContactId}){
+export default function SelectedContact({setSelectedContactId,selectedContactId}){
     const [contact, setContact] = useState(null)
 
     // use useEffect
@@ -39,6 +39,9 @@ export default function SelectedContact({selectedContactId}){
                     <p>email: {contact.email}</p>
                     <p>username: {contact.username}</p>
                     <p>city: {contact.address.city}</p>
+
+                    <button onClick={()=>setSelectedContactId(null)}>Go Back</button>
+                    
                 </div>:
                 null
                 // <p>nothing selected</p>
